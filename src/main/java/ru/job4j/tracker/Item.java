@@ -8,6 +8,7 @@ public class Item {
     }
 
     public Item(String name) {
+        this.name = name;
     }
 
     public Item(String name, int id) {
@@ -29,14 +30,5 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void printInfo() {
-        System.out.println(name);
-    }
-
-    public static void main(String[] args) {
-        Item data = new Item();
-        data.printInfo();
     }
 }
