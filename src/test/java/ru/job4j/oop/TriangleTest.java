@@ -39,7 +39,7 @@ class TriangleTest {
     }
 
     @Test
-    public void when5and50and50ThenMinus1() {
+    public void when50and50and50ThenMinus1() {
         Point a = new Point(5, 0);
         Point b = new Point(5, 0);
         Point c = new Point(5, 0);
