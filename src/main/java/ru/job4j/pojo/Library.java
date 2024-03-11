@@ -26,7 +26,7 @@ public class Library {
         System.out.println("Cycle name book");
         for (int i = 0; i < books.length; i++) {
             Book book = books[i];
-            if (book.equals(cleanCode)) {
+            if ("Clean code".equals(book.getNameBook())) {
                 System.out.println(book.getNameBook() + " - " + book.getNumberPages());
             }
         }
