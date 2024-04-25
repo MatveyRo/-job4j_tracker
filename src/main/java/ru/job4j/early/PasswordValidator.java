@@ -21,20 +21,21 @@ public class PasswordValidator {
         boolean hasDigit = false;
         boolean hasSpecial = false;
 
-        while (!hasUpCase && !hasLowCase && !hasDigit && !hasSpecial) {
-            for (char symbol : password.toCharArray()) {
-                if (Character.isUpperCase(symbol)) {
-                    hasUpCase = true;
-                }
-                if (Character.isLowerCase(symbol)) {
-                    hasLowCase = true;
-                }
-                if (Character.isDigit(symbol)) {
-                    hasDigit = true;
-                }
-                if (!Character.isLetterOrDigit(symbol)) {
-                    hasSpecial = true;
-                }
+        for (char symbol : password.toCharArray()) {
+            if (Character.isUpperCase(symbol)) {
+                hasUpCase = true;
+            }
+            if (Character.isLowerCase(symbol)) {
+                hasLowCase = true;
+            }
+            if (Character.isDigit(symbol)) {
+                hasDigit = true;
+            }
+            if (!Character.isLetterOrDigit(symbol)) {
+                hasSpecial = true;
+            }
+            if (hasUpCase && hasLowCase && hasDigit && hasSpecial) {
+                break;
             }
         }
         if (!hasUpCase) {
